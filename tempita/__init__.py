@@ -35,7 +35,7 @@ import cgi
 from urllib.parse import quote as url_quote
 import os
 import tokenize
-from cStringIO import StringIO
+from io import StringIO
 from tempita._looper import looper
 from tempita.compat3 import bytes, basestring_, next, is_unicode, coerce_text
 
