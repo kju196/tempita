@@ -32,7 +32,7 @@ If there are syntax errors ``TemplateError`` will be raised.
 import re
 import sys
 import cgi
-from urllib import quote as url_quote
+from urllib.parse import quote as url_quote
 import os
 import tokenize
 from cStringIO import StringIO
