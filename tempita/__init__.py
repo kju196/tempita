@@ -304,7 +304,7 @@ class Template(object):
             else:
                 arg0 = coerce_text(e)
             e.args = (self._add_line_info(arg0, pos),)
-            raise exc_info[0], e, exc_info[2]
+            raise
 
     def _exec(self, code, ns, pos):
         __traceback_hide__ = True
@@ -317,7 +317,7 @@ class Template(object):
                 e.args = (self._add_line_info(e.args[0], pos),)
             else:
                 e.args = (self._add_line_info(None, pos),)
-            raise exc_info[0], e, exc_info[2]
+            raise
 
     def _repr(self, value, pos):
         __traceback_hide__ = True
@@ -339,7 +339,7 @@ class Template(object):
             exc_info = sys.exc_info()
             e = exc_info[1]
             e.args = (self._add_line_info(e.args[0], pos),)
-            raise exc_info[0], e, exc_info[2]
+            raise
         else:
             if self._unicode and isinstance(value, bytes):
                 if not self.default_encoding:
